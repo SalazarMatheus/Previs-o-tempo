@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string bar, ter, pre;
+    
+    cout << "Barometro:";
+    cin >> bar;
+    cout << "Termometro:";
+    cin >> ter;
+    
+    if(bar == "subindo"){
+        if(ter == "subindo"){
+            cout << "Tempo bom, ventos quentes e secos";
+        } else if(ter == "estacionario"){
+            cout << "Tempo bom, ventos de leste frescos";
+        } else if(ter == "baixando"){
+            cout << "Tempo bom, ventos de sul a sudeste ";
+        }
+    } else if(bar == "estacionario"){
+        if(ter == "subindo"){
+            cout << "Tempo mudando para bom, ventos de leste";
+        } else if(ter == "estacionario"){
+            cout << "Tempo incerto, ventos variaveis";
+        } else if(ter == "baixando"){
+            cout << "Chuva provavel, ventos de sul a sudeste";
+        }
+    } else if(bar == "baixando"){
+        if(ter == "subindo"){
+            cout << "Tempo instavel, aproximacao de frente";
+        } else if(ter == "estacionario"){
+            cout << "Frente quente, com chuvas provaveis";
+        } else if(ter == "baixando"){
+            cout << "Chuvas abundantes e ventos de sul a sudeste fortes";
+        }
+    }
+}
